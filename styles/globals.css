@@ -1,26 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #00688c;
+  --blue-dark: #002f3e;
+  --blue-light: #66a4ba;
+  --fucsia: #ff3cac;
+  --fucsia-dark: #ac3379;
+  --fucsia-light: #ff3cac;
+  --yellow: #ffd50b;
+  --yellow-dark: #bf9900;
+  --green-light: #08bebe;
+  --green-dark: #057878;
+  --black: #000000;
+  --white: #fff;
+  --gray: #444;
+  --fuente-principal: "Archivo Narrow", sans-serif;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
 }

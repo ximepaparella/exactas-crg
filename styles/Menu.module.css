@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.nav a {
+  background-color: var(--blue-light);
+  padding: 0.3rem 1rem;
+  color: var(--white);
+}
+
+.nav a:hover {
+  background-color: var(--green-light);
+}
+
+.nav a:active {
+  background-color: var(--blue);
+}
+
+.nav a:last-of-type {
+  background-color: white;
+  border: 1px solid var(--green-light);
+  color: var(--green-light);
+}
+
+.nav a:last-of-type:hover {
+  background-color: white;
+  border: 1px solid var(--green-light);
+  color: var(--green-light);
+}
