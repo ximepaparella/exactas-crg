@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+import styles from "../styles/Main.module.css";
 
 const Layout = ({ children, title, description }) => {
   return (
@@ -10,7 +11,8 @@ const Layout = ({ children, title, description }) => {
         <meta description={description} />
       </Head>
       <Header />
-      {children}
+
+      <main className={styles.main}>{children}</main>
       <Footer />
     </div>
   );

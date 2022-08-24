@@ -9,6 +9,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-size: 100%;
 }
 
 /* Sections
@@ -20,6 +21,9 @@ html {
 
 body {
   margin: 0;
+  box-sizing: border-box;
+  color: var(--blue-dark);
+  font: 300 19px/1.4 "Archivo Narrow", Helvetica, Arial, sans-serif;
 }
 
 /**
@@ -34,11 +38,6 @@ main {
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 
 /* Grouping content
      ========================================================================== */
@@ -74,6 +73,12 @@ pre {
 a {
   background-color: transparent;
   cursor: pointer;
+  text-decoration: none;
+  color: var(--fucsia-light);
+}
+
+a:hover {
+  color: var(--fucsia-dark);
 }
 
 /**
@@ -347,4 +352,24 @@ template {
 
 [hidden] {
   display: none;
+}
+
+::selection {
+  background: #04a4cc;
+  color: var(--white);
+  text-shadow: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: "\25AA";
+  color: var(--green-light);
+  line-height: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }

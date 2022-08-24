@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .nav a {
   background-color: var(--blue-light);
-  padding: 0.3rem 1rem;
+  padding: 0.4rem 0.9rem;
   color: var(--white);
+  font-weight: 300;
 }
 
 .nav a:hover {
@@ -20,13 +21,13 @@
 }
 
 .nav a:last-of-type {
-  background-color: white;
+  background-color: var(--white);
   border: 1px solid var(--green-light);
   color: var(--green-light);
 }
 
 .nav a:last-of-type:hover {
-  background-color: white;
+  background-color: var(--green-light);
+  color: var(--white);
   border: 1px solid var(--green-light);
-  color: var(--green-light);
 }
