@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Link from "next/link";
 
 export default function AcercaDe() {
   return (
@@ -11,10 +12,12 @@ export default function AcercaDe() {
         <h2 className="heading-2">Historia</h2>
         <p>
           Dentro de la{" "}
-          <a href="https://exactas.uba.ar/">
-            Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos
-            Aires{" "}
-          </a>
+          <Link href="https://exactas.uba.ar/">
+            <a>
+              Facultad de Ciencias Exactas y Naturales de la Universidad de
+              Buenos Aires{" "}
+            </a>
+          </Link>
           (FCEN-UBA), el desarrollo sostenido en el tiempo de líneas de
           investigación en microorganismos, plásmidos y líneas celulares, ha
           derivado en la conformación de colecciones informales, dando de esta
@@ -104,10 +107,12 @@ export default function AcercaDe() {
         <h2 className="heading-2">Funcionamiento</h2>
         <ul>
           <li>
-            <a href="">
-              Resolución de creación del Centro de Recursos Genéticos (CRG) de
-              la FCEN-UBA
-            </a>
+            <Link href="">
+              <a>
+                Resolución de creación del Centro de Recursos Genéticos (CRG) de
+                la FCEN-UBA
+              </a>
+            </Link>
           </li>
           <li>Reglamento de Gestión</li>
           <li>Reglamento técnico</li>
