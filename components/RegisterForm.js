@@ -1,5 +1,8 @@
 import { useForm } from "react-hook-form";
 import styles from "../styles/Form.module.css";
+import countryData from "../data/countries";
+import countries from "../data/countries";
+import entityTypes from "../data/entityType";
 
 const RegisterForm = () => {
   const {
@@ -9,6 +12,8 @@ const RegisterForm = () => {
   } = useForm();
   const onSubmit = (data) => console.log("data", data);
   console.log(errors);
+
+  console.log("Paises", countryData);
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <fieldset className={styles.fieldset}>
@@ -54,8 +59,11 @@ const RegisterForm = () => {
           className={styles.select}
           {...register("Entidad", { required: true })}
         >
-          <option value="entidad-1">Entidad 1</option>
-          <option value="entidad-2">Entidad 2</option>
+          {entityTypes.map((entities) => (
+            <option key={entities} value={entities}>
+              {entities}
+            </option>
+          ))}
         </select>
       </fieldset>
 
@@ -77,8 +85,11 @@ const RegisterForm = () => {
           className={styles.select}
           {...register("Pais", { required: true, maxLength: 100 })}
         >
-          <option value="pais-1">País 1</option>
-          <option value="pais-2">País 2</option>
+          {countries.map((country) => (
+            <option key={country} value={country}>
+              {country}
+            </option>
+          ))}
         </select>
       </fieldset>
 

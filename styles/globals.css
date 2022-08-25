@@ -5,6 +5,9 @@
   --fucsia: #ff3cac;
   --fucsia-dark: #ac3379;
   --fucsia-light: #ff3cac;
+  --violet: #ac3379;
+  --violet-light: #d599bc;
+  --violet-dark: #970057;
   --yellow: #ffd50b;
   --yellow-dark: #bf9900;
   --green-light: #08bebe;
@@ -12,6 +15,7 @@
   --black: #000000;
   --white: #fff;
   --gray: #444;
+  --gray-light: #ddd;
   --fuente-principal: "Archivo Narrow", sans-serif;
 }
 
@@ -57,6 +61,12 @@
   font-size: 1.5rem;
   font-weight: 300;
   margin: 3rem 0 0 0;
+}
+
+.heading-services {
+  font-size: 2.5rem;
+  color: var(--violet-dark);
+  font-weight: 300;
 }
 
 .link {
