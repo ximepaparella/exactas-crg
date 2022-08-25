@@ -40,15 +40,36 @@
 }
 
 .testimonial {
-  height: 220px;
   color: var(--white);
   background: var(--green-dark);
+  padding: 2.5rem 5%;
+}
+
+.testimonial-paragraph {
+  font-size: 1rem;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.testimonial-paragraph:before {
+  content: " ";
+  width: 50px;
+  height: 7px;
+  left: 0;
+  top: 8px;
+  position: absolute;
+  background-image: url("/icono-3puntos.png");
+  background-repeat: no-repeat;
+}
+
+.testimonial-bloquote {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 .services {
   background-color: var(--gray-light);
-  height: 220px;
-  padding: 3%;
+  padding: 2.5rem 5%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -65,7 +86,7 @@
   justify-content: flex-end;
 }
 
-.services-list span {
+.services-list a {
   background-color: var(--violet);
   color: var(--white);
   width: auto;
@@ -74,7 +95,7 @@
   position: relative;
 }
 
-.services-list span:before {
+.services-list a:before {
   content: " ";
   width: 40px;
   height: 33px;
@@ -86,4 +107,51 @@
 
 .linking {
   width: 23%;
+}
+
+.linking a {
+  color: var(--white);
+  width: auto;
+  display: flex;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.linking-microorganism a,
+.linking-celular-line a,
+.linking-plasmids a {
+  color: var(--white);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.linking-microorganism a {
+  background-image: url("/boton-micro.jpeg");
+}
+
+.linking-microorganism a:hover {
+  background-image: none;
+  background-color: var(--green-light);
+}
+
+.linking-celular-line a {
+  background-image: url("/boton-lc.jpeg");
+}
+
+.linking-celular-line a:hover {
+  background-image: none;
+  background-color: var(--yellow);
+}
+
+.linking-plasmids a {
+  background-image: url("/boton-plasmidos.jpeg");
+}
+
+.linking-plasmids a:hover {
+  background-image: none;
+  background-color: var(--fucsia);
 }

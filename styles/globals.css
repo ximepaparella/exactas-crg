@@ -69,6 +69,13 @@
   font-weight: 300;
 }
 
+.heading-linking {
+  font-size: 1.9 rem;
+  color: var(--blue);
+  font-weight: 300;
+  text-align: center;
+}
+
 .link {
   color: var(--fucsia-light);
   cursor: pointer;

@@ -25,13 +25,13 @@ export default function Home() {
         </div>
         <div className={styles.center}>
           <div className={styles.testimonial}>
-            <p>
-              Los Centros de recursos genéticos ofrecen material biológico para:{" "}
+            <p className={styles["testimonial-paragraph"]}>
+              Los Centros de recursos genéticos ofrecen material biológico para:
             </p>
-            <blockquote>
-              Proveer herramientas para el estudio de problemáticas de la salud
-              humana{" "}
-            </blockquote>
+            <p className={styles["testimonial-bloquote"]}>
+              Producir nuevos antibióticos u otros compuestos en relación a la
+              salud humana y/o animal
+            </p>
           </div>
 
           <div className={styles.services}>
@@ -52,15 +52,22 @@ export default function Home() {
         </div>
 
         <div className={styles.linking}>
-          <Link href="/catalogo">
-            <a>Microorganismos</a>
-          </Link>
-          <Link href="/catalogo">
-            <a>Lineas Celulares</a>
-          </Link>
-          <Link href="/catalogo">
-            <a>Plásmidos</a>
-          </Link>
+          <h2 className="heading-linking">CATÁLOGO</h2>
+          <div className={styles["linking-microorganism"]}>
+            <Link href="/catalogo/microorganismos">
+              <a>Microorganismos</a>
+            </Link>
+          </div>
+          <div className={styles["linking-celular-line"]}>
+            <Link href="/catalogo/lineas-celulares">
+              <a>Lineas Celulares</a>
+            </Link>
+          </div>
+          <div className={styles["linking-plasmids"]}>
+            <Link href="/catalogo/plasmidos">
+              <a>Plásmidos</a>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
