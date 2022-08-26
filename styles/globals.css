@@ -14,7 +14,8 @@
   --green-dark: #057878;
   --black: #000000;
   --white: #fff;
-  --gray: #444;
+  --gray--dark: #444;
+  --gray: #777;
   --gray-light: #ddd;
   --fuente-principal: "Archivo Narrow", sans-serif;
 }
