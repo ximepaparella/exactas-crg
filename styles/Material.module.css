@@ -7,3 +7,26 @@
 .fieldset strong {
   font-weight: 600;
 }
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 2rem;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.body div {
+  width: 50%;
+}
+
+.body strong {
+  font-weight: 700;
+}
