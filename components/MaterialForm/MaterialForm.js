@@ -36,6 +36,26 @@ const MaterialForm = () => {
 
         <fieldgroup>
           <label className={styles.label}>
+            Tipo de tenencia del material original{" "}
+            <span className={styles.required}>*</span>
+          </label>
+
+          <select
+            className={styles.select}
+            {...register("Tipo de tenencia del material original", {
+              required: true,
+            })}
+          >
+            {MATERIAL.MATERIAL_TYPE_OF_HOLDING.map((materialTypeOfHolding) => (
+              <option key={materialTypeOfHolding} value={materialTypeOfHolding}>
+                {materialTypeOfHolding}
+              </option>
+            ))}
+          </select>
+        </fieldgroup>
+
+        <fieldgroup>
+          <label className={styles.label}>
             Estado: <span className={styles.required}>*</span>
           </label>
           <input
