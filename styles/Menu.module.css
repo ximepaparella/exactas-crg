@@ -3,31 +3,75 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.2rem;
+  list-style: none;
+  padding: 0;
 }
 
-.nav a {
+.nav li a {
+  color: var(--white);
+}
+
+.nav li:before {
+  content: none;
+}
+
+.nav li {
   background-color: var(--blue-light);
   padding: 0.3rem 1.1rem;
   color: var(--white);
   font-weight: 300;
 }
 
-.nav a:hover {
+.nav li a {
+  width: 100%;
+  display: flex;
+}
+
+.nav li:hover {
   background-color: var(--green-light);
 }
 
-.nav a:active {
+/* .nav li:active {
   background-color: var(--blue);
-}
+} */
 
-.nav a:last-of-type {
+.nav li:last-of-type {
   background-color: var(--white);
   border: 1px solid var(--green-light);
   color: var(--green-light);
 }
 
-.nav a:last-of-type:hover {
+.nav li:last-of-type a {
+  color: var(--primary);
+}
+
+.nav li:last-of-type:hover {
   background-color: var(--green-light);
   color: var(--white);
   border: 1px solid var(--green-light);
+}
+
+.submenu {
+  display: none;
+}
+
+.submenu li:last-of-type {
+  background-color: var(--blue-light);
+  border: 1px solid var(--blue-light);
+  color: var(--white);
+}
+
+.hasSubmenu {
+  position: relative;
+}
+
+.hasSubmenu:hover .submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9;
+  left: -40px;
+  top: 100%;
+  transition: ease-in 300;
+  width: 215px;
 }
