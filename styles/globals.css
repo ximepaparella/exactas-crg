@@ -22,6 +22,19 @@
   --fuente-principal: "Archivo Narrow", sans-serif;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 95%;
