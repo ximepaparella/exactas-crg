@@ -19,7 +19,8 @@ const Advisory = ({ advisory }) => {
 export default Advisory;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/asesoria";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/asesoria`;
+  console.log(url);
   const resp = await fetch(url);
   const advisory = await resp.json();
   console.log("Api Result", advisory);

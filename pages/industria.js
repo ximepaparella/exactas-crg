@@ -24,7 +24,7 @@ const Industry = ({ industry }) => {
 export default Industry;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/industry";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/industry`;
   const resp = await fetch(url);
   const industry = await resp.json();
   console.log("Api Result", industry);

@@ -19,7 +19,7 @@ const Training = ({ training }) => {
 export default Training;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/capacitaciones";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/capacitaciones`;
   const resp = await fetch(url);
   const training = await resp.json();
   console.log("Api Result", training);

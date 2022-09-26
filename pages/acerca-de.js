@@ -38,8 +38,8 @@ export default function AcercaDe({ about }) {
   );
 }
 
-export async function getServerSideProps() {
-  const url = "http://localhost:1337/about-us";
+export async function getStaticProps() {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/about-us`;
   const resp = await fetch(url);
   const about = await resp.json();
   console.log("Api Result", about);

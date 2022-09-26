@@ -19,7 +19,7 @@ export default function PreguntasFrecuentes({ faqs }) {
 }
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/faqs";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/faqs`;
   const resp = await fetch(url);
   const faqs = await resp.json();
   console.log("Api Result", faqs);

@@ -15,7 +15,7 @@ const Blog = ({ entries }) => {
 };
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/blogs";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/blogs`;
   const resp = await fetch(url);
   const entries = await resp.json();
 

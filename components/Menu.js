@@ -19,7 +19,7 @@ const Menu = () => {
         <Link href="/catalogo">Catalogo</Link>
       </li>
       <li className={styles.hasSubmenu}>
-        <Link href="/servicios">Servicios</Link>
+        Servicios
         <ul className={styles.submenu}>
           <li className={styles["submenu-item"]}>
             <Link href="/servicios/provision-de-material">
@@ -32,7 +32,7 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link href="/servicios//capacitaciones">Capacitaciones</Link>
+            <Link href="/servicios/capacitaciones">Capacitaciones</Link>
           </li>
           <li>
             <Link href="/servicios/asesoria">Asesoria</Link>
@@ -59,7 +59,7 @@ const Menu = () => {
         <Link href="/contacto">Contacto</Link>
       </li>
       <li className={styles.hasSubmenu}>
-        <Link href="/usuario">Usuario</Link>
+        Usuario
         <ul className={styles.submenu}>
           <li className={styles["submenu-item"]}>
             <Link href="/iniciar-sesion">Iniciar sesión</Link>

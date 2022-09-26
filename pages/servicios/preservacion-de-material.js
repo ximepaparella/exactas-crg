@@ -19,7 +19,7 @@ const MaterialPreservation = ({ material }) => {
 export default MaterialPreservation;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/preservation-material";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/preservation-material`;
   const resp = await fetch(url);
   const material = await resp.json();
   console.log("Api Result", material);

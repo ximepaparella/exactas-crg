@@ -19,7 +19,7 @@ const Others = ({ others }) => {
 export default Others;
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/others";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/others`;
   const resp = await fetch(url);
   const others = await resp.json();
   console.log("Api Result", others);
