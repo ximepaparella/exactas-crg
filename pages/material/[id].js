@@ -21,7 +21,7 @@ const MaterialDetail = ({ material }) => {
 };
 
 export async function getStaticPaths() {
-  const url = "http://localhost:1337/materials/";
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/materials/`;
   const resp = await fetch(url);
   const materiales = await resp.json();
 
