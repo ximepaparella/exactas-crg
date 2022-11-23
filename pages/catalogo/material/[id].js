@@ -1,125 +1,170 @@
+import React from "react";
 import Layout from "../../../components/Layout";
+import Material from "../../../components/Material";
 import Link from "next/link";
 import styles from "../../../styles/Material.module.css";
 
-export default function MaterialPage() {
+const MaterialDetail = ({ material }) => {
+  console.log(material);
   return (
     <Layout
       title="Material"
       description="Sitio Web de La Universidad de Buenos Aires"
     >
-      <section className={styles["material-page"]}>
-        <div className={styles.heading}>
-          <h1 className="heading-1 --blue">Ficha de material sin nomenclar</h1>
-          <Link href="/solicitar-material">
-            <a>Solicitar Material</a>
+      <section className="section-before">
+        <div className={styles.header}>
+          <h1 className="heading-1 --blue">Ficha de material </h1>
+          <Link
+            className={styles["ask-material"]}
+            alt="Solicitar Material"
+            href="/"
+          >
+            <a> Solicitar Material</a>
           </Link>
         </div>
-        <div className={styles.body}>
-          <div>
-            <p>
-              <strong className="strong">Tipo de Cultivo: </strong>
-              Microorganismos – Bacterias adquiridas
-            </p>
-            <p>
-              <strong className="strong"> Estado:</strong>
-            </p>
-            <p>
-              <strong className="strong">
-                Material modificado a partir de un material original{" "}
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">
-                {" "}
-                Tipo de tenencia del material original:{" "}
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">
-                {" "}
-                Recolectado del medioambiente:{" "}
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">Tipo de depósito: </strong>
-              Transferencia permitida solamente a otros investigadores FCEN
-            </p>
-            <p>
-              <strong className="strong">
-                Publicaciones donde se utiliza y menciona el material:
-              </strong>
-              <p>
-                <strong className="strong">
-                  Registros en Bases de Datos Genómicas:
+
+        <article className={styles.material}>
+          <div className="row">
+            <ul className={styles["material-detail-list"]}>
+              <li>
+                <strong>Tipo de Cultivo: </strong>
+              </li>
+
+              <li>
+                <strong>Estado: </strong>
+              </li>
+
+              <li>
+                <strong>Tipo de tenencia del material original:</strong>
+              </li>
+
+              <li>
+                <strong>Tipo de depósito: </strong>
+              </li>
+
+              <li>
+                <strong>
+                  Publicaciones donde se utiliza y menciona el material:
                 </strong>
-              </p>
-            </p>
-            <p>
-              <strong className="strong">
-                Nivel de identificación taxonómica:
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">
-                Método de identificación o caracterización:
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">Características:</strong>
-            </p>
-            <p>
-              <strong className="strong">Enfermedad (Disease):</strong>
-            </p>
-            <p>
-              <strong className="strong">Número de pasajes:</strong>
-            </p>
+              </li>
+
+              <li>
+                <strong>Registros en Bases de Datos Genómicas:</strong>
+              </li>
+
+              <li>
+                <strong>Nivel de identificación taxonómica:</strong>
+              </li>
+
+              <li>
+                <strong>Método de identificación o caracterización:</strong>
+              </li>
+
+              <li>
+                <strong>Características:</strong>
+              </li>
+
+              <li>
+                <strong>Enfermedad (Disease):</strong>
+              </li>
+
+              <li>
+                <strong>Número de pasajes:</strong>
+              </li>
+            </ul>
+            <ul className={styles["material-detail-list"]}>
+              <li>
+                <strong>Método de caracterización: </strong>
+              </li>
+
+              <li>
+                <strong>Mapa de referencia (Imagen): </strong>
+              </li>
+
+              <li>
+                <strong>Cita asociada:</strong>
+              </li>
+
+              <li>
+                <strong>Secuencia: </strong>
+              </li>
+
+              <li>
+                <strong>Estructura base / andamiaje:</strong>
+              </li>
+
+              <li>
+                <strong>Sustrato de origen:</strong>
+              </li>
+
+              <li>
+                <strong>País:</strong>
+              </li>
+
+              <li>
+                <strong>Provincia o Parque Nacional:</strong>
+              </li>
+
+              <li>
+                <strong>Parque Nacional:</strong>
+              </li>
+
+              <li>
+                <strong>Provincia:</strong>
+              </li>
+
+              <li>
+                <strong>Ciudad:</strong>
+              </li>
+              <li>
+                <strong>Longitud:</strong>
+              </li>
+              <li>
+                <strong>Latitud:</strong>
+              </li>
+              <li>
+                <strong>Google Map:</strong>
+              </li>
+            </ul>
           </div>
-          <div>
-            <p>
-              <strong className="strong"> Método de caracterización:</strong>
-            </p>
-            <p>
-              <strong className="strong">Mapa de referencia (Imagen): </strong>
-            </p>
-            <p>
-              <strong className="strong">Cita asociada:</strong>
-            </p>
-            <p>
-              <strong className="strong">
-                Secuencia: Estructura base / andamiaje:
-              </strong>
-            </p>
-            <p>
-              <strong className="strong">Sustrato de origen:</strong>dsadsa test{" "}
-            </p>
-            <p>
-              <strong className="strong">País: Austria </strong>
-            </p>
-            <p>
-              <strong className="strong">Provincia o Parque Nacional:</strong>
-            </p>
-            <p>
-              <strong className="strong">Parque Nacional: </strong>
-            </p>
-            <p>
-              <strong className="strong">Provincia: </strong>
-            </p>
-            <p>
-              <strong className="strong">Ciudad: </strong>Caba
-            </p>
-            <p>
-              <strong className="strong">Longitud: </strong>
-            </p>
-            <p>
-              <strong className="strong">Latitud: </strong>
-            </p>
-            <p>
-              <strong className="strong">Google Map:</strong>
-            </p>
-          </div>
-        </div>
+        </article>
+        <Link
+          className={styles["ask-material"]}
+          alt="Solicitar Material"
+          href="/"
+        >
+          <a> Solicitar Material</a>
+        </Link>
       </section>
     </Layout>
   );
+};
+
+export async function getStaticPaths() {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/materials/`;
+  const resp = await fetch(url);
+  const materiales = await resp.json();
+
+  const paths = materiales.map((material) => ({
+    params: { id: material.id },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
 }
+
+export async function getStaticProps({ params: { id } }) {
+  const url = `http://localhost:1337/materials/${id}`;
+  const resp = await fetch(url);
+  const material = await resp.json();
+
+  console.log(url);
+  console.log(material);
+  return {
+    props: { material },
+  };
+}
+
+export default MaterialDetail;

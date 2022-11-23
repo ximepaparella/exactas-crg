@@ -30,3 +30,16 @@
 .body strong {
   font-weight: 700;
 }
+
+/* material detail list */
+.material-detail-list {
+  width: 50%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 1.5rem 0;
+}
