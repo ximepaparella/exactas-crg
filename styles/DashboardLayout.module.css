@@ -1,0 +1,14 @@
+.header {
+  background-color: var(--green-dark);
+  padding: 20px;
+}
+
+.wrapper {
+  padding: 16px;
+  height: 80vh;
+}
+
+.footer {
+  padding: 16px;
+  text-align: center;
+}
