@@ -78,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: var(--fucsia-dark);
+  opacity: 0.8;
 }
 
 /**

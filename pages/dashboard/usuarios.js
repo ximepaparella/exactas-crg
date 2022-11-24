@@ -66,7 +66,11 @@ const DashboardUsers = () => {
           xs={12}
           sx={{ mb: 6 }}
         >
-          <Button variant="contained" size="large">
+          <Button
+            href="/dashboard/agregar-usuario"
+            variant="contained"
+            size="large"
+          >
             <AddCircleIcon />
             <Typography ml={1} variant="p">
               Agregar usuario

@@ -10,20 +10,13 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import CheckIcon from "@mui/icons-material/Check";
-import BlockIcon from "@mui/icons-material/Block";
 import Link from "next/link";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -178,8 +171,8 @@ export default function DashUsersTable() {
                       <TableCell align="left">{row.email}</TableCell>
                       <TableCell align="left">{row.rol}</TableCell>
                       <TableCell align="left">
-                        <Link href="/">
-                          <a href="/edit">
+                        <Link href="/dashboard/editar-usuario">
+                          <a href="/dashboard/editar-usuario">
                             <IconButton
                               color="primary"
                               aria-label="upload picture"
