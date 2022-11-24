@@ -29,14 +29,14 @@ const DashboardAddUser = () => {
             <Link underline="hover" color="inherit" href="/usuarios/">
               Usuarios
             </Link>
-            <Typography color="text.primary">Editar Usario</Typography>
+            <Typography color="text.primary">Agregar nuevo Usuario</Typography>
           </Breadcrumbs>
         </Grid>
 
         <Grid container spacing={2} rowSpacing={1}>
           <Grid item xs={12}>
             <Paper className={styles.pages} sx={{ width: "100%", mb: 2 }}>
-              <Typography variant={"h5"}>Editar usuario</Typography>
+              <Typography variant={"h5"}>Agregar nuevo usuario</Typography>
               <Divider sx={{ mb: 4, mt: 2 }} />
               <Grid item xs={6}>
                 <TextField
