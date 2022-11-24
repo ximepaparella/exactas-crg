@@ -172,7 +172,7 @@ export default function DashUsersTable() {
                       <TableCell align="left">{row.rol}</TableCell>
                       <TableCell align="left">
                         <Link href="/dashboard/editar-usuario">
-                          <a href="/dashboard/editar-usuario">
+                          <a>
                             <IconButton
                               color="primary"
                               aria-label="upload picture"
