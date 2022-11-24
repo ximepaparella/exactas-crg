@@ -11,10 +11,10 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Tools from "./DashTools";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArticleIcon from "@mui/icons-material/Article";
 import PersonIcon from "@mui/icons-material/Person";
+import CoronavirusIcon from "@mui/icons-material/Coronavirus";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -48,29 +48,100 @@ export default function TemporaryDrawer() {
             <ListItemText primary="Dashboard" />
           </ListItemButton>
         </ListItem>
+        <ListItem key="users" disablePadding>
+          <ListItemButton component="a" href="/dashboard/usuarios">
+            <ListItemIcon>
+              <PersonIcon />
+            </ListItemIcon>
+            <ListItemText primary="Usuarios" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="materials" disablePadding>
+          <ListItemButton component="a" href="/dashboard/materiales">
+            <ListItemIcon>
+              <CoronavirusIcon />
+            </ListItemIcon>
+            <ListItemText primary="Materiales" />
+          </ListItemButton>
+        </ListItem>
       </List>
       <Divider />
       <List>
-        {[
-          "Acerca De",
-          "Provisión de Material",
-          "Preservación de material",
-          "Capacitaciones",
-          "Asesoría",
-          "Otros",
-          "Industria",
-          "Normativa",
-          "Preguntas Frecuentes",
-        ].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <ArticleIcon />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
+        <ListItem key="acerca-de" disablePadding>
+          <ListItemButton component="a" href="/dashboard/acerca-de">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Acerca De" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="provision" disablePadding>
+          <ListItemButton component="a" href="/dashboard/provision-de-material">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Provisión de Material" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="preservation" disablePadding>
+          <ListItemButton
+            component="a"
+            href="/dashboard/preservacion-de-material"
+          >
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Preservación de material" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="training" disablePadding>
+          <ListItemButton component="a" href="/dashboard/capacitaciones">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Capacitaciones" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="advisory" disablePadding>
+          <ListItemButton component="a" href="/dashboard/asesoria">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Asesoría" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="others" disablePadding>
+          <ListItemButton component="a" href="/dashboard/otros">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Otros" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="industry" disablePadding>
+          <ListItemButton component="a" href="/dashboard/industria">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Industria" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="normative" disablePadding>
+          <ListItemButton component="a" href="/dashboard/normativa">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Normativa" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="faq" disablePadding>
+          <ListItemButton component="a" href="/dashboard/preguntas-frecuentes">
+            <ListItemIcon>
+              <ArticleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Preguntas Frecuentes" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
