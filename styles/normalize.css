@@ -21,9 +21,9 @@ html {
 
 body {
   margin: 0;
-  box-sizing: border-box;
   color: var(--blue-dark);
   font: 300 19px/1.4 "Archivo Narrow", Helvetica, Arial, sans-serif;
+  box-sizing: border-box; /* 1 */
 }
 
 /**
@@ -48,7 +48,7 @@ main {
    */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }

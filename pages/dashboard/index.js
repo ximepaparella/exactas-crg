@@ -3,7 +3,8 @@ import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Table from "../../components/Dashboard/DashTable";
-import { Paper, Container, Grid } from "@mui/material";
+import Card from "../../components/Dashboard/DashCard";
+import { Paper, Grid } from "@mui/material";
 
 const Dashboard = () => {
   return (
@@ -18,30 +19,40 @@ const Dashboard = () => {
           </Breadcrumbs>
         </Grid>
 
-        <Paper
-          elevation={3}
-          sx={{
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-            mb: 3,
-          }}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
-              xs=4
-            </Grid>
-            <Grid item xs={4}>
-              xs=4
-            </Grid>
-            <Grid item xs={4}>
-              xs=4
-            </Grid>
-            <Grid item xs={4}>
-              xs=4
-            </Grid>
+        <Grid container spacing={2} mb={6}>
+          <Grid item xs={3}>
+            <Card
+              number={24}
+              text={"Usuarios activos"}
+              icon={"people"}
+              color={"info"}
+            />
           </Grid>
-        </Paper>
+          <Grid item xs={3}>
+            <Card
+              number={250}
+              text={"Materiales ingresados"}
+              icon={"material"}
+              color={"secondary"}
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <Card
+              number={20}
+              text={"Solicitudes de material"}
+              icon={"ask"}
+              color={"error"}
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <Card
+              number={10}
+              text={"Contactos"}
+              icon={"contacto"}
+              color={"warning"}
+            />
+          </Grid>
+        </Grid>
 
         <Grid container spacing={2}>
           <Grid item xs={12}>

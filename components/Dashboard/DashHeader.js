@@ -13,6 +13,8 @@ import Tools from "./DashTools";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
+import ArticleIcon from "@mui/icons-material/Article";
+import PersonIcon from "@mui/icons-material/Person";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -42,7 +44,7 @@ export default function TemporaryDrawer() {
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon /> : <PersonIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -51,11 +53,21 @@ export default function TemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {["Configuración", "Páginas", "Cerrar Sesión"].map((text, index) => (
+        {[
+          "Acerca De",
+          "Provisión de Material",
+          "Preservación de material",
+          "Capacitaciones",
+          "Asesoría",
+          "Otros",
+          "Industria",
+          "Normativa",
+          "Preguntas Frecuentes",
+        ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <ArticleIcon />
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

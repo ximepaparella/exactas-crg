@@ -1,13 +1,21 @@
 const MATERIAL_TYPE_NAME = [
-  "Microorganismos – Bacterias adquiridas",
-  "Microorganismos – Bacterias nativas (provenientes de aislamientos realizados en su laboratorio)",
-  "Microorganismos – Bacterias modificadas",
-  "Microorganismos – Hongos adquiridos",
-  "Microorganismos – Hongos nativos (provenientes de aislamientos realizados en su laboratorio)",
-  "Microorganismos – Hongos modificados",
-  "Otros microorganismos",
-  "Líneas celulares",
-  "Plásmidos",
+  { label: "Microorganismos – Bacterias adquiridas" },
+  {
+    label:
+      "Microorganismos – Bacterias nativas (provenientes de aislamientos realizados en su laboratorio)",
+  },
+  { label: "Microorganismos – Bacterias modificadas" },
+  { label: "Microorganismos – Hongos adquiridos" },
+  {
+    label:
+      "Microorganismos – Hongos nativos (provenientes de aislamientos realizados en su laboratorio)",
+  },
+  { label: "Microorganismos – Hongos modificados" },
+  { label: "Otros microorganismos" },
+  {
+    label: "Líneas celulares",
+  },
+  { label: "Plásmidos" },
 ];
 
 const MATERIAL_STATE = [
