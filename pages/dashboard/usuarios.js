@@ -26,7 +26,7 @@ const DashboardUsers = () => {
         <Grid container spacing={2} mb={6}>
           <Grid item xs={3}>
             <Card
-              number={6}
+              number={1}
               text={"Usuarios Administradores"}
               icon={"people"}
               color={"primary"}
@@ -34,7 +34,7 @@ const DashboardUsers = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              number={15}
+              number={2}
               text={"Usuarios Editores"}
               icon={"people"}
               color={"primary"}
@@ -42,7 +42,7 @@ const DashboardUsers = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              number={15}
+              number={1}
               text={"Usuarios moderadores"}
               icon={"people"}
               color={"primary"}
@@ -50,7 +50,7 @@ const DashboardUsers = () => {
           </Grid>
           <Grid item xs={3}>
             <Card
-              number={15}
+              number={0}
               text={"Usuarios aprobadores"}
               icon={"people"}
               color={"primary"}
