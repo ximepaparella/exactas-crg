@@ -1,0 +1,26 @@
+const materialPlaceOfCultivation = [
+  "Agar Malta",
+  "Agar Malta Glucosado",
+  "Agar Malta Extracto de levadura",
+  "Agar papa Glucosado",
+  "Agar Saboureaud",
+  "Agar Czapeck",
+  "Agar avena",
+  "Agua peptonada",
+  "Caldo común",
+  "Caldo Cerebro Corazón",
+  "Caldo Saboureaud",
+  "Agar Mac Conckey",
+  "Medio Basal de Bold (BBM) estándar",
+  "Medio Basal de Bold (BBM) estándar + vitaminas",
+  "Standard Volvox Medium (SVM)",
+  "Medio bifásico Tierra-agua",
+  "Medio Cramer and Myers",
+  "Infusión vegetal rica en bacterias (Patterson 1982)",
+  "Medio de Jaworski (JM)",
+  "Medio F/2",
+  "Blue Green Medium (BG11)",
+  "Otros",
+];
+
+export default materialPlaceOfCultivation;

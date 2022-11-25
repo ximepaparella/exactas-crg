@@ -258,8 +258,8 @@ export default function DashTable() {
                         {row.visible ? <CheckIcon /> : <BlockIcon />}
                       </TableCell>
                       <TableCell align="left">
-                        <Link href="/">
-                          <a href="/edit">
+                        <Link href="/dashboard/editar-material">
+                          <a>
                             <IconButton
                               color="primary"
                               aria-label="upload picture"

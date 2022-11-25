@@ -25,7 +25,7 @@ const DashboardEditUser = () => {
             <Link underline="hover" color="inherit" href="/">
               CRG
             </Link>
-            <Link underline="hover" color="inherit" href="/usuarios/">
+            <Link underline="hover" color="inherit" href="/dashboard/usuarios/">
               Usuarios
             </Link>
             <Typography color="text.primary">Editar Usario</Typography>
@@ -140,7 +140,7 @@ const DashboardEditUser = () => {
                   id="ad-title"
                   label="Cargo en la entidad"
                   variant="outlined"
-                  value="Director"
+                  value="	Código/Número de la muestra"
                 />
               </Grid>
               <Grid container spacing={2}>

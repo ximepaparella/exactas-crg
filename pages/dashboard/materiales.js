@@ -61,7 +61,11 @@ const DashboardMaterials = () => {
         <Grid flex xs={12} sx={{ mb: 6 }}>
           <Paper className={styles.filter} sx={{ width: "100%", mb: 2, p: 2 }}>
             <Filter />
-            <Button variant="contained" size="large">
+            <Button
+              href="/dashboard/agregar-material"
+              variant="contained"
+              size="large"
+            >
               <AddCircleIcon />
               <Typography ml={1} variant="p">
                 Agregar material

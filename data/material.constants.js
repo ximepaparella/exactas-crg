@@ -1,21 +1,13 @@
 const MATERIAL_TYPE_NAME = [
-  { label: "Microorganismos – Bacterias adquiridas" },
-  {
-    label:
-      "Microorganismos – Bacterias nativas (provenientes de aislamientos realizados en su laboratorio)",
-  },
-  { label: "Microorganismos – Bacterias modificadas" },
-  { label: "Microorganismos – Hongos adquiridos" },
-  {
-    label:
-      "Microorganismos – Hongos nativos (provenientes de aislamientos realizados en su laboratorio)",
-  },
-  { label: "Microorganismos – Hongos modificados" },
-  { label: "Otros microorganismos" },
-  {
-    label: "Líneas celulares",
-  },
-  { label: "Plásmidos" },
+  "Microorganismos – Bacterias adquiridas",
+  "Microorganismos – Bacterias nativas (provenientes de aislamientos realizados en su laboratorio)",
+  "Microorganismos – Bacterias modificadas",
+  "Microorganismos – Hongos adquiridos",
+  "Microorganismos – Hongos nativos (provenientes de aislamientos realizados en su laboratorio)",
+  "Microorganismos – Hongos modificados",
+  "Otros microorganismos",
+  "Líneas celulares",
+  "Plásmidos",
 ];
 
 const MATERIAL_STATE = [
@@ -36,7 +28,7 @@ const MATERIAL_BACTERIA_SPECIE = ["Una especie", "Otra especie"];
 const MATERIAL_OTHER_SPECIE = ["'Acalyptospora", "faltan miles"];
 
 const MATERIAL_BACTERIA_FUNCIONAL_GROUP = [
-  "'Agricultura",
+  "Agricultura",
   "Bacterias lácticas",
   "Bioproducción",
   "Bioenergía",

@@ -1,0 +1,305 @@
+const MATERIAL_TYPE_NAME = [
+  { label: "Microorganismos – Bacterias adquiridas" },
+  {
+    label:
+      "Microorganismos – Bacterias nativas (provenientes de aislamientos realizados en su laboratorio)",
+  },
+  { label: "Microorganismos – Bacterias modificadas" },
+  { label: "Microorganismos – Hongos adquiridos" },
+  {
+    label:
+      "Microorganismos – Hongos nativos (provenientes de aislamientos realizados en su laboratorio)",
+  },
+  { label: "Microorganismos – Hongos modificados" },
+  { label: "Otros microorganismos" },
+  {
+    label: "Líneas celulares",
+  },
+  { label: "Plásmidos" },
+];
+
+const MATERIAL_STATE = [
+  { label: "Material original" },
+  { label: "Material modificado a partir de un material original" },
+  { label: "Desconocido" },
+];
+
+const MATERIAL_TYPE_OF_HOLDING = [
+  { label: "Comprado a banco o entidad similar" },
+  { label: "Recolectado del medioambiente" },
+  { label: "Préstamo documentado" },
+  { label: "Otro" },
+];
+
+const MATERIAL_BACTERIA_SPECIE = [
+  { label: "Una especie" },
+  { label: "Otra especie" },
+];
+
+const MATERIAL_OTHER_SPECIE = [
+  { label: "Acalyptospora" },
+  { label: "faltan miles" },
+];
+
+const MATERIAL_BACTERIA_FUNCIONAL_GROUP = [
+  { label: "Agricultura" },
+  { label: "Bacterias lácticas" },
+  { label: "Bioproducción" },
+  { label: "Bioenergía" },
+  { label: "Extremofilas" },
+  { label: "Bacterias anaerobicas" },
+];
+
+const MATERIAL_MUSHROOMS_FUNCIONAL_GROUP = [
+  { label: "Hongos formadores de Micorrizas (V'AM)" },
+  { label: "Hongos formadores de ectomicorrizas" },
+  { label: "Patógenos vegetales" },
+  { label: "Asociados a Insectos" },
+  { label: "Hongos liquenizantes" },
+  { label: "Levaduras" },
+  { label: "Endofitos" },
+  { label: "Endofitos de pastos" },
+  { label: "Degradadores" },
+  { label: "Coprófilos" },
+  { label: "Epífitos" },
+  { label: "Hongos de la ambrosia" },
+  { label: "Hongos comestibles" },
+  { label: "Productores de Micotoxinas" },
+  { label: "Controladores biológicos" },
+  { label: "Hongos de suelo" },
+  { label: "Hongos 'Ambientales" },
+];
+
+const MATERIAL_OTHERS_FUNCIONAL_GROUP = [
+  { label: "Ciliophora/Ciliados" },
+  { label: "Chlorophyta" },
+  { label: "Bacillariophyta" },
+  { label: "Diatomeas" },
+  { label: "Chrysophyta" },
+  { label: "Dinophyta" },
+  { label: "Xanthophyta" },
+  { label: "Euglenophyta" },
+  { label: "Cianobacteria" },
+  { label: "Haptophyta" },
+  { label: "Rhodophyta" },
+  { label: "'Algas de agua dulce (freshwater microalgae)" },
+  { label: "'Algas marinas (marine microalgae)" },
+  { label: "'Algas de suelo (soil microalgae)" },
+  { label: "'Algas de ambientes extremos (extreme environment microalgae)" },
+  { label: "'Algas productoras de carotenos" },
+  { label: "'Algas productoras (y acumuladoras) de astaxantina" },
+  { label: "'Algas productoras (y acumuladoras) de lípidos" },
+  {
+    label:
+      "Algas productoras (y acumuladoras) de ácidos grasos de la serie omega",
+  },
+  { label: "Bioremediación" },
+];
+
+const MATERIAL_PAYMENT_STATUS = [
+  { label: " Pago" },
+  { label: "Pendiente de Pago" },
+  { label: "Rechazado" },
+];
+
+const MATERIAL_DEPOSIT_COLLECTION = [
+  { label: "Colección de cultivos de hongos filamentosos nativos (BAFCcult)" },
+  {
+    label:
+      "Colección de cultivos de microalgas del Laboratorio de Biología de Protistas",
+  },
+  { label: "Colección de hongos endofiticos y saprobios de raíz" },
+  { label: "Banco de Glomeromycota in vitro" },
+];
+
+const MATERIAL_PLACE_OF_CULTIVATION = [
+  { label: "Agar Malta" },
+  { label: "Agar Malta Glucosado" },
+  { label: "Agar Malta Extracto de levadura" },
+  { label: "Agar papa Glucosado" },
+  { label: "Agar Saboureaud" },
+  { label: "Agar Czapeck" },
+  { label: "Agar avena" },
+  { label: "Agua peptonada" },
+  { label: "Caldo común" },
+  { label: "Caldo Cerebro Corazón" },
+  { label: "Caldo Saboureaud" },
+  { label: "Agar Mac Conckey" },
+  { label: "Medio Basal de Bold (BBM) estándar" },
+  { label: "Medio Basal de Bold (BBM) estándar + vitaminas" },
+  { label: "Standard Volvox Medium (SVM)" },
+  { label: "Medio bifásico Tierra-agua" },
+  { label: "Medio Cramer and Myers" },
+  { label: "Infusión vegetal rica en bacterias (Patterson 1982)" },
+  { label: "Medio de Jaworski (JM)" },
+  { label: "Medio F/2" },
+  { label: "Blue Green Medium (BG11)" },
+  { label: "Otros" },
+];
+
+const MATERIAL_BIOSECURITY_LEVEL = [
+  { label: "BSL 1" },
+  { label: "BSL 2" },
+  { label: "BSL 3" },
+  { label: "BSL 4" },
+  { label: "Desconocido / A determinar" },
+];
+
+const MATERIAL_PRESERVATION_METHODS = [
+  { label: "Secado en Suelo, Arena" },
+  { label: "Secado en Tiras o Discos de Papel Filtro" },
+  { label: "Secado en Tapones Presecados" },
+  { label: "Secado en Discos de agar" },
+  { label: "Secado en Silica Gel" },
+  { label: "Secado en Perlas de Vidrio o Porcelana" },
+  { label: "Métodos a Largo Plazo" },
+  { label: "Liofilización" },
+  { label: "Congelación –70°C" },
+  { label: "Almacenamiento en Nitrógeno Líquido" },
+  { label: "Otros" },
+];
+
+const MICROORGANISM_LEVEL_OF_IDENTIFICATION = [
+  { label: "Phylum" },
+  { label: "Clase" },
+  { label: "Orden" },
+  { label: "Familia" },
+  { label: "Género" },
+  { label: "Especie" },
+];
+
+const MICROORGANISM_METHOD_OF_IDENTIFICATION = [
+  { label: "Morfológica" },
+  { label: "Metabólica" },
+  { label: "Genómica" },
+];
+
+const CELULAR_LINES_TECHNICAL_CHARACTERISTICS = [
+  { label: "Establecidas y tumorales" },
+  { label: "Cultivos primarios" },
+  { label: "Hibridomas" },
+];
+
+const CELULAR_LINES_CHARACTERISTICS = [
+  {
+    label:
+      "Sobreexpresión de proteínas  expresión de versiones mutadas de proteínas",
+  },
+  { label: "Edición del genoma por CRISPR/Cas9" },
+  { label: "Líneas Knock out" },
+  { label: "Otra" },
+];
+
+const CELULAR_CHARACTERIZATION_METHOD = [
+  { label: "Expresión proteica" },
+  { label: "Actividad enzimática" },
+  { label: "Secuenciación genómica" },
+  { label: "Otra" },
+];
+
+const PLASMIDS_CHARACTERISTICS = [
+  { label: "Plásmido de clonado" },
+  { label: "Plásmido de expresión en procariotas" },
+  { label: "Plásmido de expresión en eucariotas" },
+  { label: "Otras" },
+];
+
+const PLASMIDS_REPLICATION_ORIGIN = [
+  { label: "pUC" },
+  { label: "pBR322" },
+  { label: "pET" },
+  { label: "pGEX" },
+  { label: "pColE1" },
+  { label: "pR6K" },
+  { label: "pACYC" },
+  { label: "pSC101" },
+  { label: "pBluescript" },
+  { label: "pGEM" },
+  { label: "Otro" },
+];
+
+const PLASMID_CHARACTERIZATION_METHOD = [
+  { label: "N/A – Material comprado" },
+  { label: "Secuencia completa" },
+  { label: "Secuencia parcial" },
+  { label: "Cortes con enzimas de restriccion" },
+  { label: "Otro" },
+];
+
+const MATERIAL_RECOLECTION_PLACE = [
+  { label: "Provincia" },
+  { label: "Parque Nacional" },
+];
+
+const MATERIAL_DEPOSIT_TYPE = [
+  { label: "Sin transferencia / Solo almacenamiento" },
+  { label: "Transferencia permitida solamente a otros investigadores FCEN" },
+  { label: "Abierto a uso académico/de investigación" },
+  { label: " Abierto a cualquier uso" },
+];
+
+const MATERIAL_USE = [{ label: "Si" }, { label: "No" }, { label: "No Aplica" }];
+
+const NATIONAL_PARKS = [
+  { label: "Baritú" },
+  { label: "Bosques Petrificados" },
+  { label: "Calilegua" },
+  { label: "Campo de los Alisos" },
+  { label: "Campos del Tuyú" },
+  { label: "Chaco, Copo" },
+  { label: "El Impenetrable" },
+  { label: "El Leoncito" },
+  { label: "El Palmar" },
+  { label: "El Rey" },
+  { label: "Iguazú" },
+  { label: "Islas de Santa Fe" },
+  { label: "Lago Puelo" },
+  { label: "Laguna Blanca" },
+  { label: "Lanín" },
+  { label: "Lihué Calel" },
+  { label: "Los Alerces" },
+  { label: "Los Arrayanes" },
+  { label: "Los Cardones" },
+  { label: "Los Glaciares" },
+  { label: "Mburucuyá" },
+  { label: "Monte León" },
+  { label: "Nahuel Huapi" },
+  { label: "Patagonia" },
+  { label: "Perito Moreno" },
+  { label: "Predelta" },
+  { label: "Quebrada del Condorito" },
+  { label: "Río Pilcomayo" },
+  { label: "San Guillermo" },
+  { label: "Sierra de las Quijadas" },
+  { label: "Talampaya" },
+  { label: "Tierra del Fuego" },
+  { label: "Traslasierra" },
+];
+
+export default {
+  MATERIAL_TYPE_NAME,
+  MATERIAL_STATE,
+  MATERIAL_TYPE_OF_HOLDING,
+  MATERIAL_BACTERIA_SPECIE,
+  MATERIAL_OTHER_SPECIE,
+  MATERIAL_BACTERIA_FUNCIONAL_GROUP,
+  MATERIAL_MUSHROOMS_FUNCIONAL_GROUP,
+  MATERIAL_OTHERS_FUNCIONAL_GROUP,
+  MATERIAL_PAYMENT_STATUS,
+  MATERIAL_DEPOSIT_COLLECTION,
+  MATERIAL_PLACE_OF_CULTIVATION,
+  MATERIAL_BIOSECURITY_LEVEL,
+  MATERIAL_PRESERVATION_METHODS,
+  MICROORGANISM_LEVEL_OF_IDENTIFICATION,
+  MICROORGANISM_METHOD_OF_IDENTIFICATION,
+  CELULAR_LINES_TECHNICAL_CHARACTERISTICS,
+  CELULAR_LINES_CHARACTERISTICS,
+  CELULAR_CHARACTERIZATION_METHOD,
+  PLASMIDS_CHARACTERISTICS,
+  PLASMIDS_REPLICATION_ORIGIN,
+  PLASMID_CHARACTERIZATION_METHOD,
+  MATERIAL_RECOLECTION_PLACE,
+  NATIONAL_PARKS,
+  MATERIAL_DEPOSIT_TYPE,
+  MATERIAL_USE,
+};

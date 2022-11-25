@@ -25,7 +25,7 @@ export default function FormularioDeIngreso() {
 
         {logged ? (
           <>
-            <form
+            {/* <form
               className={styles["form-full-width"]}
               onSubmit={handleSubmit(onSubmit)}
             >
@@ -48,9 +48,8 @@ export default function FormularioDeIngreso() {
                   ))}
                 </select>
               </fieldset>
-            </form>
-
-            <MaterialForm />
+            </form> */}
+            Formulario
           </>
         ) : (
           <>

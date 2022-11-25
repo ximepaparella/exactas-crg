@@ -26,7 +26,7 @@ const DashboardAddUser = () => {
             <Link underline="hover" color="inherit" href="/">
               CRG
             </Link>
-            <Link underline="hover" color="inherit" href="/usuarios/">
+            <Link underline="hover" color="inherit" href="/dashboard/usuarios/">
               Usuarios
             </Link>
             <Typography color="text.primary">Agregar nuevo Usuario</Typography>
