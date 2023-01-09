@@ -12,6 +12,7 @@ import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import Autocomplete from "@mui/material/Autocomplete";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import SaveIcon from "@mui/icons-material/Save";
@@ -26,6 +27,8 @@ import materialUses from "../../data/materialUse";
 import materialPlacesOfCultivation from "../../data/materialPlaceOfCultivation";
 import materialBiosecurityLevels from "../../data/materialBiosecurityLevel";
 import materialPreservationMethods from "../../data/materialPreservationMethods";
+import materialBacteriaSpecie from "../../data/materialBacteriaSpecie";
+import materialBacteriaFuncionalGroup from "../../data/materialBacteriaFuncionalGroup";
 
 const DashboardEditMaterial = () => {
   return (
@@ -144,23 +147,34 @@ const DashboardEditMaterial = () => {
                 </FormControl>
                 <Divider sx={{ mb: 2, mt: 2 }} />
                 <FormControl fullWidth sx={{ mb: 2, mt: 2 }}>
-                  <InputLabel id="demo-simple-select-label">
-                    Especie de Bacterias *
-                  </InputLabel>
-                  <Select
-                    required
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="  Tipo de tenencia del material original  *"
-                  >
-                    {materialTypeOfHoldings.map(
-                      (materialTypeOfHolding, index) => (
-                        <MenuItem key={index} value={materialTypeOfHolding}>
-                          {materialTypeOfHolding}
-                        </MenuItem>
-                      )
+                  <Autocomplete
+                    id="combo-box-demo"
+                    options={materialBacteriaSpecie}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="Especie *"
+                        variant="filled"
+                      />
                     )}
-                  </Select>
+                  />
+                </FormControl>
+                <Divider sx={{ mb: 2, mt: 2 }} />
+                <FormControl fullWidth sx={{ mb: 2, mt: 2 }}>
+                  <Autocomplete
+                    multiple
+                    id="tags-standard"
+                    options={materialBacteriaFuncionalGroup}
+                    getOptionLabel={(option) => option}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        variant="standard"
+                        label="Grupos funcionales"
+                      />
+                    )}
+                  />
                 </FormControl>
                 <Divider sx={{ mb: 2, mt: 2 }} />
                 <Grid spacing={2} sx={{ mb: 3, mt: 3 }}>
